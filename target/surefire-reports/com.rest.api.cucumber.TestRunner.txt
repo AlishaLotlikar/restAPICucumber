@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: com.rest.api.cucumber.TestRunner
+-------------------------------------------------------------------------------
+Tests run: 24, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.011 sec - in com.rest.api.cucumber.TestRunner

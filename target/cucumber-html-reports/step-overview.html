@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html>
+<head>
+  
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/jquery.tablesorter.min.js"></script>
+<script type="text/javascript" src="js/Chart.min.js"></script>
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+
+<link rel="stylesheet" href="css/bootstrap.min.css" type="text/css"/>
+<link rel="stylesheet" href="css/reporting.css" type="text/css"/>
+<link rel="stylesheet" href="css/font-awesome.min.css"/>
+<link rel="shortcut icon" href="images/favicon.png"/>
+
+<script type="text/javascript">
+$(document).ready(function() {
+    // this will tell tablesorter to try looking for the data-value attribute
+    // if present, it'll sort by that instead
+    // otherwise, it'll sort by the text content of the table cell
+    $("#tablesorter").tablesorter({
+        textAttribute: 'data-value',
+        // ignores the first row of the header, the 'scenario', 'steps', since
+        // sorting those doesn't make sense
+        selectorHeaders: '> thead tr:not(.dont-sort) th',
+        // use a stable sort
+        sortStable: true
+    });
+});
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+<title>Cucumber-JVM Reports  - Steps Overview</title>
+
+</head>
+<body>
+
+<nav class="navbar navbar-default navbar-fixed-top" id="navigation">
+  <div class="container-fluid">
+    <div class="collapse navbar-collapse">
+      <p class="navbar-text navbar-left">Cucumber-JVM Report</p>
+      <ul class="nav navbar-nav navbar-right">
+                <li role="presentation" ><a href="feature-overview.html">Features</a></li>
+        <li role="presentation" ><a href="tag-overview.html">Tags</a></li>
+        <li role="presentation"     class="active" ><a href="step-overview.html">Steps</a></li>
+        <li role="presentation" ><a href="failures-overview.html">Failures</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="container-fluid" id="build-info">
+  <div class="row">
+    <div class="col-md-6 col-md-offset-1">
+      <table class="table table-bordered">
+        <thead>
+          <tr>
+            <th>Project</th>
+                          <th>Number</th>
+                        <th>Date</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="info">
+            <td>HelloWord</td>
+                          <td>1</td>
+                        <td>06 Jul 2017, 10:22</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+<div id="report-lead" class="container-fluid>
+  <div class="row">
+    <div class="col-md-10 col-md-offset-1">
+      <h2>Steps Statistics</h2>
+              <p>The following graph shows step statistics for this build. Below list is based on results.
+ step does not provide information about result then is not listed below.
+ Additionally @Before and @After are not counted because they are part of the scenarios, not steps.</p>
+          </div>
+  </div>
+</div>
+
+<div class="container-fluid" id="summary">
+  <div class="row">
+    <div class="col-md-10 col-md-offset-1">
+              <table id="tablesorter" class="stats-table table-hover">
+
+          <thead>
+            <tr class="header">
+              <th>Implementation</th>
+              <th>Occurrences</th>
+              <th>Duration</th>
+              <th>Average</th>
+              <th>Ratio</th>
+            </tr>
+          </thead>
+
+          <tbody>
+                          <tr>
+                <td class="location">helloWord.I_should_see_JSON_response_with_pairs_on_the_filtered_node(String,DataTable)</td>
+                <td>2</td>
+                <td class="duration" data-value="299985441">299ms</td>
+                <td class="duration" data-value="149992720">149ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">helloWord.a_user_performs_a_get_request_to(String)</td>
+                <td>1</td>
+                <td class="duration" data-value="106820">000ms</td>
+                <td class="duration" data-value="106820">000ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">helloWord.a_user_setup_a_post_request_to_with_below_details(String,DataTable)</td>
+                <td>1</td>
+                <td class="duration" data-value="479804">000ms</td>
+                <td class="duration" data-value="479804">000ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">helloWord.perform_the_post_request()</td>
+                <td>1</td>
+                <td class="duration" data-value="134383334">134ms</td>
+                <td class="duration" data-value="134383334">134ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">helloWord.perform_the_request()</td>
+                <td>1</td>
+                <td class="duration" data-value="1381538355">1s 381ms</td>
+                <td class="duration" data-value="1381538355">1s 381ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">helloWord.the_apis_are_up_and_running_for(String)</td>
+                <td>2</td>
+                <td class="duration" data-value="95109989">095ms</td>
+                <td class="duration" data-value="47554994">047ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">helloWord.the_response_code_should_be(int)</td>
+                <td>2</td>
+                <td class="duration" data-value="2116994">002ms</td>
+                <td class="duration" data-value="1058497">001ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">helloWord2.I_should_see_JSON_response_with_pairs_under_the_filtered_node(String,DataTable)</td>
+                <td>2</td>
+                <td class="duration" data-value="282211">000ms</td>
+                <td class="duration" data-value="141105">000ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">helloWord2.b_user_setup_a_get_request_to(String)</td>
+                <td>1</td>
+                <td class="duration" data-value="105133">000ms</td>
+                <td class="duration" data-value="105133">000ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">helloWord2.b_user_setup_a_post_request_to_with_below_details(String,DataTable)</td>
+                <td>1</td>
+                <td class="duration" data-value="139387">000ms</td>
+                <td class="duration" data-value="139387">000ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">helloWord2.send_the_post_request()</td>
+                <td>1</td>
+                <td class="duration" data-value="79077">000ms</td>
+                <td class="duration" data-value="79077">000ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">helloWord2.send_the_request()</td>
+                <td>1</td>
+                <td class="duration" data-value="80101">000ms</td>
+                <td class="duration" data-value="80101">000ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">helloWord2.the_nd_api_is(int,String)</td>
+                <td>2</td>
+                <td class="duration" data-value="440048">000ms</td>
+                <td class="duration" data-value="220024">000ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">helloWord2.the_response_code_is(int)</td>
+                <td>2</td>
+                <td class="duration" data-value="292727">000ms</td>
+                <td class="duration" data-value="146363">000ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                      </tbody>
+
+          <tfoot class="total">
+            <tr>
+              <td>14</td>
+              <td>20</td>
+              <td class="duration">1s 915ms</td>
+              <td class="duration">095ms</td>
+              <td>Totals</td>
+            </tr>
+          </tfoot>
+
+        </table>
+          </div>
+  </div>
+</div>
+
+
+<nav class="navbar navbar-default" id="footer">
+  <div class="container-fluid">
+    <p class="navbar-text navbar-right">
+        <small>generate Cucumber HTML reports via:&nbsp;</small>
+        <a class="navbar-link" href="https://github.com/jenkinsci/cucumber-reports-plugin">Jenkins Plugin</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/cucumber-reporting">Standalone</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/cucumber-sandwich">Sandwich</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/maven-cucumber-reporting">Maven</a>
+        &nbsp;&nbsp;
+    </p>
+  </div>
+</nav>
+
+</body>
+</html>

@@ -9,7 +9,7 @@ import org.junit.runner.RunWith;
 
 @RunWith(Cucumber.class)
 @Cucumber.Options (
-        format ={"pretty","html:target/html/"},
+        format ={"json:target/cucumber.json"}, //,"html:target/html/"
         features = "src/test/resource",
         glue = { "com.rest.api.cucumber"}
 )
